@@ -1,0 +1,81 @@
+
+
+
+body {}
+main {
+    text-align: center;
+    margin: 125px 70px;
+    background-color: rgb(169, 150, 99, 0.6);
+}
+
+.mainimg {}
+.mainimg img {
+    object-fit: cover;
+    width: 100%;
+    height: 40%;
+}
+
+.mainimg h1 {
+    color: #fff;
+    font-family: 游明朝;
+    font-size: 5rem;
+}
+
+.mainimg .toptittle {
+    color: #fff;
+    font-family: 游明朝;
+}
+
+.comcept {
+    text-align: right;
+    margin-right: 16%;
+    margin-bottom: 100px;
+    margin-top: 135px;
+}
+.comcept .co {
+    font-family: 游明朝;
+    font-size: 0.85rem;
+}
+
+.partition {}
+.partition .kglof {
+    width: 1150px;
+    object-fit: cover;
+    height: 245px;
+}
+
+.shop {
+    margin: 125px 0;
+}
+
+.shop h2 {
+    font-family: 游明朝;
+    text-align: right;
+    margin-right: 21%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    font-size: 4rem;
+}
+.shop .item {
+    font-family: 游明朝;
+    text-align: left;
+    margin-left: 15%;
+    font-size: 1.5rem;
+}
+.shop .list {
+    font-family: 游明朝;
+    text-align: left;
+    margin-left: 28%;
+}
+.shop .map {
+    font-family: 游明朝;
+    color: #000;
+    text-align: left;
+    margin-left: -28%;
+}
+.shop .syousai {
+    font-family: 游明朝;
+    font-size: 0.8rem;
+    text-align: left;
+    margin-left: 33%;
+}
