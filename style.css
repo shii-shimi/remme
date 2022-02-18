@@ -1,11 +1,13 @@
 
 
 
-body {}
+body {
+    width: 100%;
+}
 main {
     text-align: center;
-    margin: 125px 70px;
-    background-color: rgb(169, 150, 99, 0.6);
+    margin: 125px 70px 0px 70px;
+    background-color: rgba(165, 148, 103, 0.6);
 }
 
 .mainimg {}
@@ -13,12 +15,19 @@ main {
     object-fit: cover;
     width: 100%;
     height: 40%;
+    position: relative;
+}
+
+.mainimg .tittle {
+    position: absolute;
+    top: 47%;
+    left: 58%;
 }
 
 .mainimg h1 {
     color: #fff;
     font-family: 游明朝;
-    font-size: 5rem;
+    font-size: 7rem;
 }
 
 .mainimg .toptittle {
@@ -27,17 +36,90 @@ main {
 }
 
 .comcept {
-    text-align: right;
-    margin-right: 16%;
+    text-align: center;
     margin-bottom: 100px;
+    margin-right: 85px;
+    margin-left: 85px;
     margin-top: 135px;
 }
 .comcept .co {
     font-family: 游明朝;
-    font-size: 0.85rem;
+    font-size: 1rem;
 }
 
-.partition {}
+
+
+/*========= スクロールダウンのためのCSS ===============*/
+
+
+/*=== 9-1-4 矢印が動いてスクロールを促す  ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown4{
+    /*描画位置※位置は適宜調整してください*/
+  position:absolute;
+  bottom:-1%;
+  right:10%;
+    /*矢印の動き1秒かけて永遠にループ*/
+  animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove{
+      0%{bottom:1%;}
+      50%{bottom:3%;}
+     100%{bottom:1%;}
+ }
+
+/*Scrollテキストの描写*/
+.scrolldown4 span{
+    /*描画位置*/
+  position: absolute;
+  left:-35px;
+  bottom:10px;
+    /*テキストの形状*/
+  color: #eee;
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.scrolldown4:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: -6px;
+    /*矢印の形状*/
+    width: 1px;
+    height: 20px;
+    background: #eee;
+    transform: skewX(-31deg);
+}
+
+.scrolldown4:after{
+  content:"";
+    /*描画位置*/
+  position: absolute;
+  bottom:0;
+  right:0;
+    /*矢印の形状*/
+  width:1px;
+  height: 50px;
+  background:#eee;
+}
+
+
+
+
+.partition {
+    margin-top: 230px;
+}
+
 .partition .kglof {
     width: 1150px;
     object-fit: cover;
@@ -61,6 +143,7 @@ main {
     text-align: left;
     margin-left: 15%;
     font-size: 1.5rem;
+    margin-top: 10px;
 }
 .shop .list {
     font-family: 游明朝;
@@ -79,3 +162,232 @@ main {
     text-align: left;
     margin-left: 33%;
 }
+
+.parti {
+    margin: 210px 0;
+    position: relative;
+}
+.menutop {
+    width: 85%;
+    height: 400px;
+    object-fit: cover;
+    /* position: relative; */
+}
+.ins .guide {
+    position: absolute;
+    top: 45%;
+    left: 16%;
+    color: white;
+    font-family: 游明朝;
+    font-size: 1.5rem;
+}
+
+.painst {
+    color: white;
+    background-color: rgb(128, 128, 128, 0.6);
+    position: absolute;
+    top: 63%;
+    left: 23%;
+}
+
+
+.menu {}
+.menu h3 {
+    font-family: 游明朝;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    font-size: 4rem;
+}
+.menu .basicmenu {
+    width: 100%;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+     margin:0 auto;
+ }
+ 
+ .slider img {
+     width:100%;/*スライダー内の画像を横幅100%に*/
+     height:auto;
+ }
+ 
+ /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+ 
+ .slider .slick-slide {
+     margin:0 10px;
+ }
+ 
+ /*矢印の設定*/
+ 
+ /*戻る、次へ矢印の位置*/
+ .slick-prev, 
+ .slick-next {
+     position: absolute;/*絶対配置にする*/
+     top: 42%;
+     cursor: pointer;/*マウスカーソルを指マークに*/
+     outline: none;/*クリックをしたら出てくる枠線を消す*/
+     border-top: 2px solid #666;/*矢印の色*/
+     border-right: 2px solid #666;/*矢印の色*/
+     height: 15px;
+     width: 15px;
+ }
+ 
+ .slick-prev {/*戻る矢印の位置と形状*/
+     left: -1.5%;
+     transform: rotate(-135deg);
+ }
+ 
+ .slick-next {/*次へ矢印の位置と形状*/
+     right: -1.5%;
+     transform: rotate(45deg);
+ }
+ 
+ /*ドットナビゲーションの設定*/
+ 
+ .slick-dots {
+     text-align:center;
+   margin:20px 0 0 0;
+ }
+ 
+ .slick-dots li {
+     display:inline-block;
+   margin:0 5px;
+ }
+ 
+ .slick-dots button {
+     color: transparent;
+     outline: none;
+     width:8px;/*ドットボタンのサイズ*/
+     height:8px;/*ドットボタンのサイズ*/
+     display:block;
+     border-radius:50%;
+     background:#ccc;/*ドットボタンの色*/
+ }
+ 
+ .slick-dots .slick-active button{
+     background:#333;/*ドットボタンの現在地表示の色*/
+ }
+ 
+ 
+ /*========= レイアウトのためのCSS ===============*/
+ 
+ body{
+    background-color: rgb(169, 150, 99, 0.6);
+ }
+ 
+ h2,p {
+     text-align:center;
+     padding:20px;
+ }
+ 
+ ul{
+   margin:0;
+   padding: 0;
+   list-style: none;
+ }
+ 
+ a{
+   color: #333;
+ }
+ 
+ a:hover,
+ a:active{
+   text-decoration: none;
+ }
+
+ 
+
+
+ /*========= ===============*/
+
+
+
+
+
+ .giftimg {
+    margin-top: 265px;
+    position: relative;
+}
+
+
+
+.giftimg .gifttop {
+    width: 85%;
+    object-fit: cover;
+}
+
+
+.giftimg .gifttittle {
+    position: absolute;
+    bottom: 7%;
+    left: 30%;
+    font-family: 游明朝;
+    font-size: 2rem;
+    color: rgb(59, 59, 59);
+}
+
+.giftimg .giftp {
+    position: absolute;
+    bottom: 3%;
+    left: 53%;
+    font-family: 游明朝;
+}
+
+.base {
+    margin-top: 135px; 
+    background-color: rgb(245, 245, 220, 0.4);
+    padding: 100px 0;
+    
+}
+.base .baseannai {
+    font-family: 游明朝;
+    font-size: 1.2rem;
+}
+.base.basephoto {}
+
+footer {
+    padding-top: 10px;
+    border-top: solid rgba(168, 168, 168, 0.6);
+    margin-top: 230px;
+    text-align: right;
+    width: 100%;
+}
+.company {
+    text-align: right;
+    margin-right: 20%;
+}
+
+.flex {
+    display: flex;
+    justify-content: right;
+    margin: auto 0;
+}
+.instlink {
+   
+}
+.instlink .footinst {
+    /* text-align: right; */
+}
+
+.instlink .ins {
+    width: 39%;
+    margin-right: 25px;
+    /* text-align: center; */
+}
+.instlink .ins .footinst {}
+.footbaselink {
+    margin-right: 20%;
+}
+.footbaselink .footbase {
+    text-align: right;
+}
+
+.footbaselink .basef {
+    margin-right: 25px;
+}
+.footbaselink .basef .footbase {}
+
