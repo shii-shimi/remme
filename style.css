@@ -4,6 +4,105 @@
 body {
     width: 100%;
 }
+
+/*　ハンバーガーボタン　*/
+.hamburger {
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .hamburger span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : #555;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .hamburger span:nth-child(1) {
+    top: 10px;
+  }
+  .hamburger span:nth-child(2) {
+    top: 20px;
+  }
+  .hamburger span:nth-child(3) {
+    top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .hamburger.active span{
+    background :#fff;
+  }
+  .hamburger.active span:nth-child(1) {
+    -webkit-transform: translateY(6px);
+    -moz-transform   : translateY(6px);
+    transform        : translateY(6px);
+  }
+  .hamburger.active span:nth-child(2){
+  -webkit-transform: translateY(-4px);
+    -moz-transform   : translateY(-4px);
+    transform        : translateY(-4px);
+  }  
+  
+  .hamburger.active span:nth-child(3) {
+    -webkit-transform: translateY(-14px);
+    -moz-transform   : translateY(-14px);
+    transform        : translateY(-14px);
+  }
+  
+  nav.globalMenuSp {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+  
+  nav.globalMenuSp ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  
+  nav.globalMenuSp ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+  }
+  nav.globalMenuSp ul li:last-child {
+    padding-bottom: 0;
+  }
+  nav.globalMenuSp ul li:hover{
+    background :#ddd;
+  }
+  
+  nav.globalMenuSp ul li a {
+    display: block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration :none;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+  nav.globalMenuSp.active {
+    opacity: 100;
+  
+  }
 main {
     text-align: center;
     margin: 125px 70px 0px 70px;
@@ -353,21 +452,24 @@ footer {
     padding-top: 10px;
     border-top: solid rgba(168, 168, 168, 0.6);
     margin-top: 230px;
-    text-align: right;
+    text-align: left;
     width: 100%;
+    background-image: url(img/shop.jpg);    /* èƒŒæ™¯ç”»åƒæŒ‡å®š */
+    background-size: cover;
 }
 .company {
-    text-align: right;
-    margin-right: 20%;
+    /* text-align: right; */
+    margin-right: 60%;
 }
 
 .flex {
     display: flex;
-    justify-content: right;
+    justify-content: left;
     margin: auto 0;
 }
 .instlink {
    
+margin-left: 10%;
 }
 .instlink .footinst {
     /* text-align: right; */
@@ -375,7 +477,7 @@ footer {
 
 .instlink .ins {
     width: 39%;
-    margin-right: 25px;
+    margin-left: 45px;
     /* text-align: center; */
 }
 .instlink .ins .footinst {}
@@ -387,7 +489,165 @@ footer {
 }
 
 .footbaselink .basef {
-    margin-right: 25px;
+    margin-left: 40px;
 }
 .footbaselink .basef .footbase {}
 
+
+/* --------------------------------------------------
+    /* モバイル向けスタイル */
+
+    @media screen and (max-width: 540px) {
+   
+        main {
+            margin: initial;
+        }
+
+        .mainimg .tittle {
+            position: absolute;
+            top: 10%;
+            left: 12%;
+        }
+        .mainimg h1 {
+            color: rgb(255, 255, 255);
+            font-family: 游明朝;
+            font-size: 2rem;
+        }
+
+        .scrolldown4 {
+            position: absolute;
+            top: -64%;
+            right: 10%;
+            animation: arrowmove 1s ease-in-out infinite;
+        }
+
+        .scrolldown4 span {
+            position: absolute;
+            left: -35px;
+            top: 84px;
+            color: #eee;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            -ms-writing-mode: tb-rl;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+        }
+
+        .scrolldown4:before {
+            content: "";
+            position: absolute;
+            bottom: 46%;
+            right: -6px;
+            width: 1px;
+            height: 20px;
+            background: #eee;
+            transform: skewX(-31deg);
+        }
+
+        .scrolldown4:after {
+            content: "";
+            position: absolute;
+            bottom: 46%;
+            right: 0;
+            width: 1px;
+            height: 50px;
+            background: #eee;
+        }
+
+        .comcept {
+            margin-bottom: initial;
+            margin-right: initial; 
+            margin-left: initial; 
+            margin-top: 115px; 
+        }
+
+        .comcept .co {
+            font-family: 游明朝;
+            font-size: 0.7rem;
+        }
+
+        .mainimg .toptittle {
+            color: rgb(255, 255, 255);
+            font-family: 游明朝;
+            font-size: 0.7rem;
+        }
+
+        .partition .kglof {
+            width: 100%;
+            object-fit: cover;
+            height: 245px;
+        }
+
+        .shop h2 {
+            font-family: 游明朝;
+            text-align: right;
+            margin-right: 10%;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            font-size: 3rem;
+        }
+
+        .menu h3 {
+            font-family: 游明朝;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            font-size: 3rem;
+        }
+
+        .menutop {
+            width: 95%;
+            height: initial;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .painst {
+            color: white;
+            background-color: rgb(128, 128, 128, 0.6);
+            position: absolute;
+            top: 78%;
+            left: 23%;
+        }
+
+        .painst {
+            color: white;
+            background-color: rgb(128, 128, 128, 0.6);
+            position: absolute;
+            top: 78%;
+            left: 23%;
+        }
+
+        .giftimg .giftp {
+            position: absolute;
+           bottom: 3%;
+            left: 40%;
+            font-family: 游明朝;
+            font-size: 0.5rem;
+        }
+        .giftimg .gifttittle {
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            font-family: 游明朝;
+            font-size: 0.7rem;
+            color: rgb(59, 59, 59);
+        }
+
+        .base .baseannai {
+            font-family: 游明朝;
+            font-size: 1rem;
+        }
+
+        footer {
+            padding-top: 10px;
+            border-top: solid rgba(168, 168, 168, 0.6);
+            margin-top: 230px;
+            text-align: left;
+            width: 100%;
+            background-image: initial;
+            background-size: cover;
+        }
+        
+        
+    
+    }
