@@ -5,7 +5,7 @@ body {
     width: 100%;
 }
 
-/*　ハンバーガーボタン　*/
+/*  ハンバーガーボタン*/
 .hamburger {
     display : block;
     position: fixed;
@@ -103,7 +103,7 @@ body {
     opacity: 100;
   
   }
-main {
+    main {
     text-align: center;
     margin: 125px 70px 0px 70px;
     border:solid 1.5px rgba(180, 164, 120, 0.534);
@@ -508,7 +508,6 @@ main {
 
 footer {
     padding-top: 115px;
-  
     background-color: rgba(165, 148, 103, 0.6);
     margin: 0 70px 0px 70px;
     justify-content: center;
@@ -526,13 +525,8 @@ footer {
     justify-content: center;
     margin: auto 0;
 }
-.instlink {
-   
-
-}
-.instlink .footinst {
-   
-}
+.instlink {}
+.instlink .footinst {}
 
 .instlink .ins {
     width: 33%;
@@ -540,9 +534,8 @@ footer {
     /* text-align: center; */
 }
 .instlink .ins .footinst {}
-.footbaselink {
-    
-}
+.footbaselink {}
+
 .footbaselink .footbase {
     text-align: right;
 }
@@ -684,9 +677,8 @@ footer {
             margin-left: 15%;
             font-size: 1.5rem;
             margin-top: 20px;
-            
-
         }
+
         .painst {
             color: white;
             background-color: rgb(128, 128, 128, 0.6);
@@ -739,7 +731,7 @@ footer {
             padding: 10px 0px;
             border-radius: initial;
         }
-        }
+        
 
         .base .baseannai {
             font-family: 游明朝;
@@ -752,14 +744,14 @@ footer {
         }
 
         footer {
-            padding-top: 10px;
-            border-top: solid 1px rgba(168, 168, 168, 0.6);
+            padding-top: 70px;
             margin-top: initial;
-            text-align: center;
             width: 100%;
             background-image: initial;
             background-size: cover;
             background-color: rgba(165, 148, 103, 0.6);
+            margin: 0px;
+            justify-content: center;
         }
 
         .company {
@@ -768,35 +760,32 @@ footer {
             font-size: 0.6rem;
         
         }
-        
-        .instlink {
-            margin-left: 10%;
-            margin-top: 48px;
-        }
 
-        .instlink .footinst {
-            text-align: center; 
+        .flex {
+            display: flex;
+            justify-content: center;
+            margin: auto 0;
         }
-
-        .footbaselink {
-            margin-left: 10%;
-            margin-top: 48px;
-        }
-
-        .footbaselink .footbase {
-            text-align: center;
-        }
-
-        .footbaselink .basef {
-            margin-left: 0px;
-            width: 30%;
-        }
+        .instlink {}
+        .instlink .footinst {}
         
         .instlink .ins {
-            width: 35%;
-            margin-left: 10px;
-            padding-top: 4px;
-            /* text-align: center*/
+            width: 33%;
+            margin-left: 45px;
+            /* text-align: center; */
         }
+        .instlink .ins .footinst {}
+        .footbaselink {}
+        
+        .footbaselink .footbase {
+            text-align: right;
+        }
+        
+        .footbaselink .basef {
+            
+            margin-left: 37px;    
+        }
+        .footbaselink .basef .footbase {}
+        
     
     }
