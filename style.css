@@ -287,7 +287,7 @@ body {
     object-fit: cover;
     /* position: relative; */
 }
-.ins .guide {
+.inst {
     position: absolute;
     top: 45%;
     left: 16%;
@@ -297,11 +297,38 @@ body {
 }
 
 .painst {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    width: 200px;
     color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
     background-color: rgb(128, 128, 128, 0.6);
+    border-radius: 40px;
+}
+
+.painst::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(45deg);
+}
+
+.painst::after{
+    content: '';
     position: absolute;
-    top: 63%;
-    left: 23%;
+    top: 50%;
+    left: 9%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 2px;
+    background-color: #000;
 }
 
 
@@ -657,6 +684,13 @@ footer {
             /*background-color: #e5dfd8;*/
         }
 
+        .shop .list {
+            margin-top: 5%;
+            font-size: 0.8rem;
+
+        }
+
+
         .menu h3 {
             font-family: 游明朝;
             margin-top: 50px;
@@ -676,7 +710,7 @@ footer {
             text-align: left;
             margin-left: 15%;
             font-size: 1.5rem;
-            margin-top: 20px;
+            margin-top: 8%;
         }
 
         .painst {
