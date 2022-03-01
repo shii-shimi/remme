@@ -106,10 +106,10 @@ body {
     main {
     text-align: center;
     margin: 125px 70px 0px 70px;
-    border:solid 1.5px rgba(180, 164, 120, 0.534);
+    /*border:solid 1.5px rgba(180, 164, 120, 0.534);*/
     border-top: transparent;
     border-bottom: transparent;
-    background-color: rgba(165, 148, 103, 0.6);
+    /*background-color:  rgb(78, 78, 77, 0.7);*/
     
 }
 
@@ -247,6 +247,14 @@ body {
 
 .shop {
     margin: 125px 0;
+    background-image: url(img/haikeibokasi.jpg);
+    background-size: cover;
+}
+
+.bkRG {
+    height: 100%;
+    width: 120%;
+    background: rgba(255, 255, 255, 0.35);
 }
 
 .shop h2 {
@@ -287,10 +295,10 @@ body {
     position: relative;
 }
 .menutop {
-    width: 85%;
-    height: 400px;
+    width: 82%;
+    height: 437px;
     object-fit: cover;
-    /* position: relative; */
+    filter: blur(1.5px);
 }
 .inst {
     position: absolute;
@@ -337,7 +345,11 @@ body {
 }
 
 
-.menu {}
+.menu {
+    
+    background-color: #d4d5d533;
+}
+
 .menu h3 {
     font-family: 游明朝;
     margin-top: 50px;
@@ -540,7 +552,7 @@ body {
 
 footer {
     padding-top: 115px;
-    background-color: rgba(165, 148, 103, 0.6);
+    background-color:  rgb(78, 78, 77, 0.1);
     margin: 0 70px 0px 70px;
     justify-content: center;
 }
