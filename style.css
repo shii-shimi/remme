@@ -598,6 +598,7 @@ footer {
    
         main {
             margin: initial;
+            background-color: white;
         }
 
         
@@ -815,7 +816,7 @@ footer {
             width: 100%;
             background-image: initial;
             background-size: cover;
-            background-color: rgba(165, 148, 103, 0.6);
+            background-color: rgba(40, 40, 41, 0.8);
             margin: 0px;
             justify-content: center;
         }
