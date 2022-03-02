@@ -1,4 +1,57 @@
 
+/*ローリングの為のｃｓｓ************************************************************/
+
+#splash {
+    /*fixedで全画面に*/
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgb(110, 110, 110);
+    text-align: center;
+    color: #fff;
+}
+
+/*ローリング画面中央配置*/
+#splash_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 100%;
+}
+
+/*割れる画面のアニメーション*/
+.loader_cover {
+    width: 100%;
+    height: 50%;
+    background-color: rgb(110, 110, 110);
+    transition: all .2s cubic-bezier(.04, .435, .315, .9);
+    transform: scaleY(1);
+}
+
+/*上の画面*/
+.loader_cover-up {
+    transform-origin: center top;
+}
+
+/*下の画面*/
+.loader_cover-down {
+    position: absolute;
+    bottom: 0;
+    transform-origin: center bottom;
+}
+
+/*クラス名がついたらy軸方向に０*/
+.coveranime {
+    transform: scaleY(0);
+}
+
+/***********************************************************************************************************************/
+
 
 
 body {
@@ -433,11 +486,6 @@ body {
  
  /*========= レイアウトのためのCSS ===============*/
  
- body{
-    background-color: rgba(253, 238, 198, 0.5);
-   
-
- }
  
  h2,p {
      text-align:center;
@@ -547,12 +595,12 @@ body {
 .topyazirusi{}
 .topyazirusi .yazirusi { 
     width: 3%;
-    margin-top: 40px;
+    margin-top: 87px;
+    margin-bottom: 10%;
 }
 
 footer {
     padding-top: 115px;
-    background-color:  rgb(78, 78, 77, 0.1);
     margin: 0 70px 0px 70px;
     justify-content: center;
 }
@@ -616,7 +664,7 @@ footer {
 
         .mainimg .tittle {
             position: absolute;
-            top: 10%;
+            top: 30%;
             left: 12%;
         }
         .mainimg h1 {
@@ -631,8 +679,8 @@ footer {
 
         .scrolldown4 {
             position: absolute;
-            top: -64%;
-            right: 10%;
+            top: 16%;
+            right: 45%;
             animation: arrowmove 1s ease-in-out infinite;
         }
 
@@ -814,9 +862,6 @@ footer {
             padding-top: 70px;
             margin-top: initial;
             width: 100%;
-            background-image: initial;
-            background-size: cover;
-            background-color: rgba(40, 40, 41, 0.8);
             margin: 0px;
             justify-content: center;
         }
