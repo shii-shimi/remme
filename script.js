@@ -1,3 +1,54 @@
+
+
+//テキストのカウントアップ＋バーの設定
+var bar = new ProgressBar.Line(splash_text,{//id名を指定
+  easing: 'easeInOut', //アニメーション効果linear, easeIn, easeOut, easeInOutが使用可能
+  duration: 5000,//時間指定１０００＝1秒
+  strokeWidth: 0.2,//進捗ゲージの太さ
+  color: '#555',//進捗ゲージのカラー
+  trailWidth: 0.2,//ゲージベースの太さ
+  trailColor: '#bbb',//ゲージベースの線のカラー
+  text: {//テキスト形状を直接配置
+    style:{
+      position:'absolute',
+      left:'50%',
+      top:'50%',
+      padding:'0',
+      margin:'-30px 0 0 0',//バーより上に配置
+      transform:'translate(-50%, -50%)',
+      'fontsize':'1rem',
+      color:'#fff',
+  },
+  sutoStyleContsiner: false//自動付与のスタイルをきる
+},
+step: function(state, bar) {
+  bar.setText(Math.round(bar.value() *100) + ' %');
+}
+});
+
+//アニメーションスタート
+bar.animate(1.0, function(){//バーを描画する割合を指定1.0なら１００％まで描画する
+  $("#splash_text").fadeOut(10);//フェイドアウトでローリングテキストを削除
+  $(".loader_cover-up").addClass("coveranime");//カバーが上に上がるクラス追加
+  $(".loader_cover-down").addClass("coveranime");//カバーが下に下がるクラス追加
+  $("#splash").fadeOut();//＃ｓｐｌaｓｈエリアをフェイドアウト
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(function() {
   $('.hamburger').click(function() {
       $(this).toggleClass('active');
