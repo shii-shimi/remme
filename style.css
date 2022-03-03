@@ -56,7 +56,7 @@
 
 body {
     width: 100%;
-    background-color: rgb(208, 206, 200,0.12);
+    background-color: rgb(208, 206, 200,0.2);
 }
 
 /*  ハンバーガーボタン*/
@@ -314,7 +314,7 @@ body {
 .shop h2 {
     font-family: 游明朝;
     text-align: right;
-    margin-right: 21%;
+    margin-right: 72%;
     margin-top: 50px;
     margin-bottom: 80px;
     font-size: 4rem;
@@ -335,13 +335,13 @@ body {
     font-family: 游明朝;
     color: #000;
     text-align: left;
-    margin-left: -28%;
+    margin-left: -21%;
 }
 .shop .syousai {
     font-family: 游明朝;
     font-size: 0.8rem;
     text-align: left;
-    margin-left: 33%;
+    margin-left: 28%;
 }
 
 .parti {
@@ -533,7 +533,7 @@ body {
     font-family: 游明朝;
     margin-top: 20px;
     margin-bottom: 60px;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: left;
     margin-left: 20%;
 }
@@ -666,9 +666,16 @@ footer {
 
     @media screen and (max-width: 540px) {
    
+
+        body {
+            width: 100%;
+            background-color: rgb(208, 206, 200,0.2);
+        }
+
+
         main {
             margin: initial;
-            background-color: white;
+            
         }
 
         
@@ -766,7 +773,7 @@ footer {
         .shop h2 {
             font-family: 游明朝;
             text-align: right;
-            margin-right: 10%;
+            margin-right: 47%;
             margin-top: 50px;
             margin-bottom: 80px;
             font-size: 3rem;
@@ -786,7 +793,7 @@ footer {
         }
 
         .shop .list {
-            margin-top: 5%;
+            margin-top: 2%;
             font-size: 0.8rem;
 
         }
@@ -833,6 +840,11 @@ footer {
         .parti {
             margin: 60px 0;
             position: relative;
+        }
+
+        .guide {
+            
+            font-size: 1rem;
         }
 
         .slider {
