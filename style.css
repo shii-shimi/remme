@@ -605,9 +605,9 @@ body {
 .v_line_fix {
     margin-left: 49.5%;
     margin-top: -35px;
-    width: 2px;
+    width: 1px;
     height: 62px;
-    background-color: rgba(119, 117, 117, 0.904);
+    background-color: #565656;
   }
 
   .arrow2{
