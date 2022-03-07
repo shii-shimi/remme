@@ -70,8 +70,9 @@ body {
     height: 42px;
     cursor: pointer;
     text-align: center;
-  }
-  .hamburger span {
+    pointer-events: auto;
+}
+.hamburger span {
     display : block;
     position: absolute;
     width   : 30px;
@@ -81,39 +82,43 @@ body {
     -webkit-transition: 0.3s ease-in-out;
     -moz-transition   : 0.3s ease-in-out;
     transition        : 0.3s ease-in-out;
-  }
-  .hamburger span:nth-child(1) {
+}
+.hamburger span:nth-child(1) {
     top: 10px;
-  }
-  .hamburger span:nth-child(2) {
+}
+.hamburger span:nth-child(2) {
     top: 20px;
-  }
-  .hamburger span:nth-child(3) {
+}
+.hamburger span:nth-child(3) {
     top: 30px;
-  }
-  
-  /* ナビ開いてる時のボタン */
-  .hamburger.active span{
+}
+
+/*  ナビ開いてる時のボタン */
+.hamburger.active span{
     background :#fff;
-  }
-  .hamburger.active span:nth-child(1) {
+
+}
+.hamburger.active span:nth-child(1) {
     -webkit-transform: translateY(6px);
     -moz-transform   : translateY(6px);
     transform        : translateY(6px);
-  }
-  .hamburger.active span:nth-child(2){
-  -webkit-transform: translateY(-4px);
+
+}
+.hamburger.active span:nth-child(2){
+    -webkit-transform: translateY(-4px);
     -moz-transform   : translateY(-4px);
     transform        : translateY(-4px);
-  }  
-  
-  .hamburger.active span:nth-child(3) {
+
+}  
+
+.hamburger.active span:nth-child(3) {
     -webkit-transform: translateY(-14px);
     -moz-transform   : translateY(-14px);
     transform        : translateY(-14px);
-  }
-  
-  nav.globalMenuSp {
+
+}
+
+nav.globalMenuSp {
     position: fixed;
     z-index : 2;
     top  : 0;
@@ -124,50 +129,60 @@ body {
     width: 100%;
     opacity: 0;
     transition: opacity .6s ease, visibility .6s ease;
-  }
-  
-  nav.globalMenuSp ul {
+
+
+}
+
+nav.globalMenuSp ul {
     margin: 0 auto;
     padding: 0;
     width: 100%;
-  }
-  
-  nav.globalMenuSp ul li {
+
+}
+
+nav.globalMenuSp ul li {
     list-style-type: none;
     padding: 0;
     width: 100%;
     transition: .4s all;
-  }
-  nav.globalMenuSp ul li:last-child {
+    pointer-events: none;
+}
+nav.globalMenuSp ul li:last-child {
     padding-bottom: 0;
-  }
-  nav.globalMenuSp ul li:hover{
+    pointer-events: none;
+}
+nav.globalMenuSp ul li:hover{
     background :#ddd;
-  }
-  
-  nav.globalMenuSp ul li a {
+}
+
+nav.globalMenuSp ul li a {
     display: block;
     color: #fff;
     padding: 1em 0;
     text-decoration :none;
-  }
-  
-  /* このクラスを、jQueryで付与・削除する */
-  nav.globalMenuSp.active {
-    opacity: 100;
-  
-  }
-    main {
-    text-align: center;
-    margin: 125px 70px 0px 70px;
-    /*border:solid 1.5px rgba(180, 164, 120, 0.534);*/
-    border-top: transparent;
-    border-bottom: transparent;
-    /*background-color:  rgb(78, 78, 77, 0.7);*/
-    
 }
 
-.mainimg {}
+/* このクラスを、jQueryで付与・削除する */
+nav.globalMenuSp.active {
+    opacity: 100;
+   
+}
+
+
+
+
+
+main {
+    text-align: center;
+    margin: 125px 70px 0px 70px;
+    border-top: transparent;
+    border-bottom: transparent;
+}
+
+.mainimg {
+    width: 100%;
+}
+
 .mainimg img {
     object-fit: cover;
     width: 100%;
@@ -176,8 +191,7 @@ body {
 }
 
 .mobailtop {
-    display: none;
-    
+    display: none; 
 }
 
 .mainimg .tittle {
@@ -242,7 +256,7 @@ body {
       0%{bottom:1%;}
       50%{bottom:3%;}
      100%{bottom:1%;}
- }
+}
 
 /*Scrollテキストの描写*/
 .scrolldown4 span{
@@ -300,9 +314,10 @@ body {
 }
 
 .shop {
-    margin: 125px 0;
+    margin: 75px 0 110px 0;
     background-image: url(img/haikeibokasi.jpg);
     background-size: cover;
+    width: 100%;
 }
 
 .bkRG {
@@ -324,7 +339,7 @@ body {
     text-align: left;
     margin-left: 15%;
     font-size: 1.5rem;
-    margin-top: 10px;
+    margin-top: 45px;
 }
 .shop .list {
     font-family: 游明朝;
@@ -336,6 +351,7 @@ body {
     color: #000;
     text-align: left;
     margin-left: -21%;
+    pointer-events: auto;
 }
 .shop .syousai {
     font-family: 游明朝;
@@ -420,80 +436,81 @@ body {
 .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
     width:94%;
      margin:0 auto;
- }
+}
  
- .slider img {
-     width:100%;/*スライダー内の画像を横幅100%に*/
-     height:auto;
- }
+.slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height: 21vw;
+    object-fit: cover;
+}
  
  /*slickのJSで書かれるタグ内、スライド左右の余白調整*/
  
- .slider .slick-slide {
-     margin:0 10px;
- }
- 
- /*矢印の設定*/
- 
- /*戻る、次へ矢印の位置*/
- .slick-prev, 
- .slick-next {
-     position: absolute;/*絶対配置にする*/
-     top: 42%;
-     cursor: pointer;/*マウスカーソルを指マークに*/
-     outline: none;/*クリックをしたら出てくる枠線を消す*/
-     border-top: 2px solid #666;/*矢印の色*/
-     border-right: 2px solid #666;/*矢印の色*/
-     height: 15px;
-     width: 15px;
- }
- 
- .slick-prev {/*戻る矢印の位置と形状*/
-     left: -1.5%;
-     transform: rotate(-135deg);
- }
- 
- .slick-next {/*次へ矢印の位置と形状*/
-     right: -1.5%;
-     transform: rotate(45deg);
- }
- 
- /*ドットナビゲーションの設定*/
- 
- .slick-dots {
-     text-align:center;
-   margin:20px 0 0 0;
- }
- 
- .slick-dots li {
-     display:inline-block;
-   margin:0 5px;
- }
- 
- .slick-dots button {
-     color: transparent;
-     outline: none;
-     width:8px;/*ドットボタンのサイズ*/
-     height:8px;/*ドットボタンのサイズ*/
-     display:block;
-     border-radius:50%;
-     background:#ccc;/*ドットボタンの色*/
- }
- 
- .slick-dots .slick-active button{
-     background:#333;/*ドットボタンの現在地表示の色*/
- }
- 
- 
- /*========= レイアウトのためのCSS ===============*/
- 
- 
- h2,p {
-     text-align:center;
-     padding:20px;
- }
- 
- .shopul {
+.slider .slick-slide {
+    margin:0 10px;
+}
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+h2,p {
+    text-align:center;
+    padding:20px;
+}
+
+.shopul {
     margin-right: 50%;
     margin-left: 10%;
     padding-left: 0;
@@ -502,18 +519,18 @@ body {
     border-top: transparent;
     border-right: transparent;
     padding-bottom: 70px;
-    
+
 }
- 
- 
- a{
-   color: #333;
- }
- 
- a:hover,
- a:active{
-   text-decoration: none;
- }
+
+
+a{
+    color: #333;
+}
+
+a:hover,
+a:active{
+    text-decoration: none;
+}
 
  
 
@@ -524,7 +541,7 @@ body {
 
 
 
- .giftimg {
+.giftimg {
     margin-top: 265px;
     position: relative;
 }
@@ -576,13 +593,6 @@ body {
 }
 
 .base {
-    
-    /* margin-top: 135px; */
-    /* margin-right: 33.5%; */
-    /* margin-left: 33.5%; */
-    /* background-color: rgb(245, 245, 220, 0.4); */
-    /* padding: 100px 0px; */
-    /* border-radius: 50%;*/
 
 }
 
@@ -601,24 +611,10 @@ body {
 }
 
 
-
-.v_line_fix {
-    margin-left: 49.5%;
-    margin-top: -35px;
-    width: 1px;
-    height: 62px;
-    background-color: #565656;
-  }
-
-  .arrow2{
-    margin-left: 46%;
-    margin-top: 8%;
-    width: 30px;
-    height: 30px;
-    border: 1px solid;
-    border-color: #565656 #565656 transparent transparent;
-    transform: rotate(-45deg);
-  }
+.up img{
+    width: 6%;
+    margin-top: 65px;
+}
 
 
 footer {
@@ -645,8 +641,8 @@ footer {
 .instlink .ins {
     width: 33%;
     margin-left: 45px;
-    /* text-align: center; */
 }
+
 .instlink .ins .footinst {}
 .footbaselink {}
 
@@ -655,9 +651,16 @@ footer {
 }
 
 .footbaselink .basef {
-    
     margin-left: 37px;    
 }
+
+.footgooglelink {}
+.footgooglelink .goomap {
+    width: 40%;
+    justify-content: center;
+    margin-left: 37px;
+}
+.footgooglelink .goomap .footgoo {}
 .footbaselink .basef .footbase {}
 
 
@@ -704,6 +707,7 @@ footer {
 
         .partition {
             margin-top: 60px;
+            width: 100%;
         }
 
         .scrolldown4 {
@@ -793,9 +797,8 @@ footer {
         }
 
         .shop .list {
-            margin-top: 2%;
+            /* margin-top: 2%; */
             font-size: 0.8rem;
-
         }
 
 
@@ -818,7 +821,7 @@ footer {
             text-align: left;
             margin-left: 15%;
             font-size: 1.5rem;
-            margin-top: 8%;
+            margin-top: 10%;
         }
 
         .painst {
@@ -855,6 +858,12 @@ footer {
             padding-top: 20px;
         }
 
+        .slider img {
+            width:100%;/*スライダー内の画像を横幅100%に*/
+            height: auto;
+            object-fit: cover;
+        }
+
         .giftimg {
             margin-top: 65px;
             position: relative;
@@ -863,20 +872,22 @@ footer {
         .giftimg .giftp {
           
             font-family: 游明朝;
-            font-size: 0.5rem;
         }
         .giftimg .gifttittle {
            
-            font-family: 游明朝;
-            font-size: 0.7rem;
-            color: rgb(59, 59, 59);
+margin-top: 30px;
+           
+font-family: 游明朝;
+           
+font-size: 1.2rem;
+           
+color: rgb(59, 59, 59);
         }
 
         .base {
             margin-top: 10px;
             margin-right: 2%;
             margin-left: 2%;
-            /* background-color: rgb(245, 245, 220, 0.4); */
             padding: 10px 0px;
             border-radius: initial;
         }
@@ -884,7 +895,7 @@ footer {
 
         .base .baseannai {
             font-family: 游明朝;
-            font-size: 0.7rem;
+            font-size: 0.89rem;
         }
 
         .topyazirusi .yazirusi {
@@ -903,8 +914,7 @@ footer {
         .company {
             text-align: center;
             margin: auto;
-            font-size: 0.6rem;
-        
+            font-size: 1rem;
         }
 
         .flex {
@@ -918,13 +928,12 @@ footer {
         .instlink .ins {
             width: 33%;
             margin-left: 45px;
-            /* text-align: center; */
         }
         .instlink .ins .footinst {}
         .footbaselink {}
         
         .footbaselink .footbase {
-            text-align: right;
+            text-align: center;
         }
         
         .footbaselink .basef {
