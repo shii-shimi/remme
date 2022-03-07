@@ -875,7 +875,7 @@ footer {
         .slider {
             width: 100%;
             margin: 0 auto;
-            background-color: #373533;
+            background-color: none;
             vertical-align: middle;
             padding-top: 31px;
             padding-right: 23px;
