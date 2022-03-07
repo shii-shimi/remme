@@ -56,7 +56,7 @@
 
 body {
     width: 100%;
-    background-color: rgb(208, 206, 200,0.2);
+    background-color: #2125294d;
 }
 
 /*  ハンバーガーボタン*/
@@ -860,7 +860,7 @@ footer {
 
         .slider img {
             width:100%;/*スライダー内の画像を横幅100%に*/
-            height: auto;
+            height: 70vw;
             object-fit: cover;
         }
 
@@ -944,3 +944,6 @@ color: rgb(59, 59, 59);
         
     
     }
+
+
+    
