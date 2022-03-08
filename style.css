@@ -129,8 +129,7 @@ nav.globalMenuSp {
     width: 100%;
     opacity: 0;
     transition: opacity .6s ease, visibility .6s ease;
-
-
+    visibility: hidden;
 }
 
 nav.globalMenuSp ul {
@@ -145,11 +144,11 @@ nav.globalMenuSp ul li {
     padding: 0;
     width: 100%;
     transition: .4s all;
-    pointer-events: none;
+ 
 }
 nav.globalMenuSp ul li:last-child {
     padding-bottom: 0;
-    pointer-events: none;
+ 
 }
 nav.globalMenuSp ul li:hover{
     background :#ddd;
@@ -165,7 +164,7 @@ nav.globalMenuSp ul li a {
 /* このクラスを、jQueryで付与・削除する */
 nav.globalMenuSp.active {
     opacity: 100;
-   
+    visibility: visible;
 }
 
 
