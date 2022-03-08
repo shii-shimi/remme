@@ -72,7 +72,7 @@ $(function() {
 $(function () {
     const fade_bottom = 50; // 画面下からどの位置でフェードさせるか(px)
     const fade_move = 100; // どのぐらい要素を動かすか(px)
-    const fade_time = 2500; // フェードの時間(ms)
+    const fade_time = 1900; // フェードの時間(ms)
     // フェード前のcssを定義
     $(".comcept").css({
       opacity: 0,
@@ -101,7 +101,7 @@ $(function () {
   $(function () {
     const fade_bottom = 50; // 画面下からどの位置でフェードさせるか(px)
     const fade_move = 100; // どのぐらい要素を動かすか(px)
-    const fade_time = 2500; // フェードの時間(ms)
+    const fade_time = 1900; // フェードの時間(ms)
     // フェード前のcssを定義
     $(".partition").css({
       opacity: 0,
@@ -130,7 +130,7 @@ $(function () {
 $(function () {
     const fade_bottom = 50; // 画面下からどの位置でフェードさせるか(px)
     const fade_move = 100; // どのぐらい要素を動かすか(px)
-    const fade_time = 2500; // フェードの時間(ms)
+    const fade_time = 1900; // フェードの時間(ms)
     // フェード前のcssを定義
     $(".shop").css({
       opacity: 0,
@@ -161,7 +161,7 @@ $(function () {
 $(function () {
   const fade_bottom = 50; // 画面下からどの位置でフェードさせるか(px)
   const fade_move = 100; // どのぐらい要素を動かすか(px)
-  const fade_time = 2500; // フェードの時間(ms)
+  const fade_time = 1900; // フェードの時間(ms)
   // フェード前のcssを定義
   $(".menu").css({
     opacity: 0,
@@ -192,7 +192,7 @@ $(function () {
 $(function () {
   const fade_bottom = 50; // 画面下からどの位置でフェードさせるか(px)
   const fade_move = 100; // どのぐらい要素を動かすか(px)
-  const fade_time = 2500; // フェードの時間(ms)
+  const fade_time = 1900; // フェードの時間(ms)
   // フェード前のcssを定義
   $("parti").css({
     opacity: 0,
@@ -224,7 +224,7 @@ $(function () {
 $(function () {
   const fade_bottom = 50; // 画面下からどの位置でフェードさせるか(px)
   const fade_move = 100; // どのぐらい要素を動かすか(px)
-  const fade_time = 2500; // フェードの時間(ms)
+  const fade_time = 1900; // フェードの時間(ms)
   // フェード前のcssを定義
   $(".gifttop").css({
     opacity: 0,
@@ -251,7 +251,7 @@ $(function () {
 $(function () {
 const fade_bottom = 50; // 画面下からどの位置でフェードさせるか(px)
 const fade_move = 100; // どのぐらい要素を動かすか(px)
-const fade_time = 2500; // フェードの時間(ms)
+const fade_time = 1900; // フェードの時間(ms)
 // フェード前のcssを定義
 $(".base").css({
   opacity: 0,
@@ -276,15 +276,14 @@ $(window).on("scroll load", function () {
 });
 
 $('.slider').not('.slick-initialized').slick({
-    autoplay: true,//自動的に動き出すか。初期値はfalse。
-    infinite: true,//スライドをループさせるかどうか。初期値はtrue。
+   //自動的に動き出すか。初期値はfalse。
+    //スライドをループさせるかどうか。初期値はtrue。
     slidesToShow: 3,//スライドを画面に3枚見せる
     slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
     prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
     nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
     dots: true,//下部ドットナビゲーションの表示
-    autoplaySpeed: 5000,
-    speed: 1000,
+
     
     
     responsive: [
@@ -303,6 +302,8 @@ $('.slider').not('.slick-initialized').slick({
       }
     }
   ]
-})
-var autoplaySpeed = 5000;;
 
+
+})
+
+;
